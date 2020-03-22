@@ -9,6 +9,8 @@ public class ArrayStudy {
 		System.out.println("hello array2");
 		
 		System.out.println("hello array3");
+		
+		System.out.println("hello array4");
 	}
 
 }
