@@ -7,6 +7,8 @@ public class ArrayStudy {
 		System.out.println("hello array!");
 		
 		System.out.println("hello array2");
+		
+		System.out.println("hello array3");
 	}
 
 }
