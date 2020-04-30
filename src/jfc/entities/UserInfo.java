@@ -2,17 +2,17 @@ package jfc.entities;
 
 import java.io.InputStream;
 
-public class UserInfo {
+public class UserInfo implements Cloneable{
 	
-	private int id;                                //Êı¾İ¿âÀàĞÍ£ºint,×ÔÔö
-	private String name;                           //Êı¾İ¿âÀàĞÍ£ºvarchar(255)
-	private String password;                       //Êı¾İ¿âvarchar,×Ô¶¯¶ÔÓÚ
+	private int id;                                //æ•°æ®åº“ç±»å‹ï¼šint,è‡ªå¢
+	private String name;                           //æ•°æ®åº“ç±»å‹ï¼švarchar(255)
+	private String password;                       //æ•°æ®åº“varchar,è‡ªåŠ¨å¯¹äº
 	private String realName;
-	private java.util.Date registerDate;           //¿ÉÒÔµ±×öÈëÖ°ÈÕÆÚ,Êı¾İ¿âÀàĞÍtimestamp,×¢ÒâÕâÀïµÄÀàĞÍÊÇjava.util.date
+	private java.util.Date registerDate;           //å¯ä»¥å½“åšå…¥èŒæ—¥æœŸ,æ•°æ®åº“ç±»å‹timestamp,æ³¨æ„è¿™é‡Œçš„ç±»å‹æ˜¯java.util.date
 	
-	private java.util.Date birthDay;               //Í¬ÉÏ£¬java.util.date,´øÊ±¼ä²¿·Ö
+	private java.util.Date birthDay;               //åŒä¸Šï¼Œjava.util.date,å¸¦æ—¶é—´éƒ¨åˆ†
 	
-	private InputStream picture;                   //Èç¹ûÊı¾İ¿â¶ÔÓÚµÄ×Ö¶ÎÊÇblob,ÄÇÃ´Ö»ÄÜ´æ´¢65535×Ö½ÚÊı¾İ£¬´ó¸ÅÊÇ64k£¬³¬¹ıÕâ¸ö¾Í±¨´í£¬Òò´ËÊı¾İ¿â¶ÔÓÚµÄ×Ö¶Î×îºÃÊÇlongblobÀàĞÍ£¬longblobÄÜ´ïµ½4G
+	private InputStream picture;                   //å¦‚æœæ•°æ®åº“å¯¹äºçš„å­—æ®µæ˜¯blob,é‚£ä¹ˆåªèƒ½å­˜å‚¨65535å­—èŠ‚æ•°æ®ï¼Œå¤§æ¦‚æ˜¯64kï¼Œè¶…è¿‡è¿™ä¸ªå°±æŠ¥é”™ï¼Œå› æ­¤æ•°æ®åº“å¯¹äºçš„å­—æ®µæœ€å¥½æ˜¯longblobç±»å‹ï¼Œlongblobèƒ½è¾¾åˆ°4G
 	
 	public UserInfo() {
 		super();
@@ -77,5 +77,11 @@ public class UserInfo {
 	public String toString() {
 		return "UserInfo [id=" + id + ", name=" + name + ", password=" + password + ", realName=" + realName
 				+ ", registerDate=" + registerDate + ", birthDay=" + birthDay + ", picture=" + picture + "]";
+	}
+	
+	//æŠŠè¿™ä¸ªæ–¹æ³•é‡å†™ä¸€ä¸‹å°±è¡Œï¼Œä»€ä¹ˆéƒ½ä¸å†™
+	@Override
+	public Object clone() throws CloneNotSupportedException {
+		return super.clone();
 	}
 }
